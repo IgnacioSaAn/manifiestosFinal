@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pagina-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pagina-web
+  template:
+    metadata:
+      labels:
+        app: pagina-web
+    spec:
+      containers:
+      - name: pagina-web
+        image: ignaciosa/front:v1
+        ports:
+        - containerPort: 80
+        env:
+          - name: backend-url
+            value: http://backend-service:30001
