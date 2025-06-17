@@ -6,7 +6,7 @@ spec:
   storageClassName: bd
   volumeName: static-pv
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi

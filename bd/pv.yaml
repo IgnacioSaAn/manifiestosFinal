@@ -7,7 +7,7 @@ spec:
   capacity:
     storage: 1Gi
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: /data/mysql

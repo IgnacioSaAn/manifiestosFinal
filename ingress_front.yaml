@@ -3,14 +3,18 @@ kind: Ingress
 metadata:
   name: frontend-backend-ingress
   namespace: default
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: localhost:5000
-
+  - host: golgana.com
     http:
       paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-service
+            port:
+              number: 5000
       - path: /
         pathType: Prefix
         backend:
@@ -18,11 +22,5 @@ spec:
             name: pagina-web-service
             port:
               number: 80
-      - path: /api
-        pathType: Prefix
-        backend:
-          service:
-            name: backend-service
-            port:
-              number: 8080
+
 
