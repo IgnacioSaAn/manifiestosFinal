@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: golgana-dev
+
+resources:
+  - deployment.yaml
+  - service.yaml
+  - ingress_front.yaml
+  - deployment_back.yaml
+  - service_back.yaml
+  - bd/deployment_mysql.yaml
+  - bd/init_sql_configmap.yaml
+  - bd/pv.yaml
+  - bd/pvc.yaml
+  - bd/service_bd.yaml
