@@ -13,10 +13,10 @@ spec:
         app: pagina-web
     spec:
       containers:
-      - name: pagina-web
-        image: ignaciosa/front:test
-        ports:
-        - containerPort: 80
-        env:
-          - name: backend-url
-            value: /api
+        - name: pagina-web
+          image: ignaciosa/front:ce2a9385e0a3ab6e330d4d46217cc5f3c507367c
+          ports:
+            - containerPort: 80
+          env:
+            - name: backend-url
+              value: /api

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ignaciosa/back:test4
+          image: ignaciosa/back:ce2a9385e0a3ab6e330d4d46217cc5f3c507367c
           ports:
             - containerPort: 5000
           env:
