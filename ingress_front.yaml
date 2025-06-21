@@ -4,8 +4,7 @@ metadata:
   name: frontend-backend-ingress
 spec:
   rules:
-  - host: golgana.com
-    http:
+  - http:
       paths:
       - path: /api
         pathType: Prefix
